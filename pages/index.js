@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome <a href="#">Homo Sapien!</a>
+          Welcome Homo Sapien!
         </h1>
 
         <p className={styles.description}>

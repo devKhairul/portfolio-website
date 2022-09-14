@@ -40,6 +40,10 @@
 }
 
 .title {
+  background: #303F9F;
+  background: linear-gradient(to right, #303F9F 0%, #F44336 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
