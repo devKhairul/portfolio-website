@@ -27,19 +27,31 @@ export default function Home() {
 
 
         <div className={styles.grid}>
-          <a href="https://movies.khairulalam.dev" target="_blank" className={styles.card}>
+          <a 
+            href="https://movies.khairulalam.dev" 
+            target="_blank" 
+            className={styles.card}
+            rel="noreferrer"  
+          >
             <h2>Search Movies &rarr;</h2>
             <p>Search for any movie you can imagine. <small><i>Courtesy of OMDb API.</i></small></p>
           </a>
 
-          <a href="https://fitnessguru.khairulalam.dev" target="_blank" className={styles.card}>
+          <a 
+            href="https://fitnessguru.khairulalam.dev" 
+            target="_blank" 
+            className={styles.card}
+            rel="noreferrer"
+          >
             <h2>Fitness Guru &rarr;</h2>
             <p>Helps you keep fit. Just look for exercises your heart desire. <small><i>Courtesy of RapidAPI.</i></small></p>
           </a>
 
           <a
-            href="https://reduxapp.khairulalam.dev/" target="_blank"
+            href="https://reduxapp.khairulalam.dev/" 
+            target="_blank"
             className={styles.card}
+            rel="noreferrer"
           >
             <h2>Redux What? &rarr;</h2>
             <p>A rudimentaty ecommerce store showing off the capabilities of Redux Toolkit</p>
@@ -64,7 +76,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Made with &#x2661; by Khairul Alam
+          Khairul Alam - Developer | Dreamer | Homo Sapien
         </a>
       </footer>
     </div>
