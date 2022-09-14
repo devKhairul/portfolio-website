@@ -64,7 +64,7 @@ export default function Home() {
           >
             <h2>Say hi &rarr;</h2>
             <p>
-              Please drop a line if you'd like to say hi. I won't ghost you. I promise! 
+              Please drop a line if you would like to say hi. I will not ghost you. I promise! 
             </p>
           </a>
         </div>
