@@ -54,7 +54,7 @@ export default function Home() {
             rel="noreferrer"
           >
             <h2>Redux What? &rarr;</h2>
-            <p>A rudimentaty ecommerce store showing off the capabilities of Redux Toolkit</p>
+            <p>A rudimentary ecommerce store showing off the capabilities of Redux Toolkit</p>
           </a>
 
           <a 
