@@ -118,6 +118,25 @@
   margin-left: 0.5rem;
 }
 
+.btn {
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #0070f3;
+  padding: 10px 30px;
+  border-radius: 3px;
+  background: #303F9F;
+  background: linear-gradient(to right, #303F9F 0%, #F44336 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btn:hover {
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  cursor: pointer;
+  border: 2px solid #0070f3;
+  
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

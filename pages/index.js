@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -67,6 +68,12 @@ export default function Home() {
               Please drop a line if you would like to say hi. I will not ghost you. I promise! 
             </p>
           </a>
+        </div>
+
+        <div style={{marginTop: "80px"}}>
+          <Link href='/motivation'>
+            <button className={styles.btn}>Motivate Me</button>
+          </Link>
         </div>
       </main>
 
