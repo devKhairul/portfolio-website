@@ -6,8 +6,9 @@ import { useEffect, useState } from 'react'
 
 export default function Home() {
 
-    const [quote, setQuote] = useState([])
-
+    const [quote, setQuote] = useState({})
+    const [refresh, setRefresh] = useState()
+    
     const config = {
       headers: {
         'X-RapidAPI-Key': '3cc234d8acmsh41ba4a008de79b7p1968cbjsnf4ff361bdf37',
@@ -25,8 +26,9 @@ export default function Home() {
       
     }, [])
     
-    // console.log(quote.content)
-    // console.log(quote.originator.name)
+
+
+    // console.log(quote)
 
     return (
       <div className={styles.container}>
@@ -37,28 +39,29 @@ export default function Home() {
         </Head>
   
         <main className={styles.main}>
-          <h1 className={styles.title}>
+          <h1 className={styles.title} style={{marginBottom: "1em"}}>
             Your daily dose of motivation
           </h1>
-  
-          <p className={styles.description}>
-            { quote.content }
+            
+          <p className={styles.description} style={{margin: "10px"}}>
+            { quote.content && quote.content }
           </p>
-          {/* <h2>{ quote.originator.name }</h2> */}
-  
+
+          { quote.originator && <h2>{quote.originator.name}</h2> }
+          
+          <small style={{marginBottom: "3em"}}>Courtesy of RapidAPI</small>
+            
           <h2 className={styles.titlesm}>
             <Link href='/'>
                 <a>&larr; Go back</a>
             </Link> 
           </h2>
-  
-  
           
         </main>
   
         <footer className={styles.footer}>
           <a
-            href="#"
+            href="https://linkedin.com/in/devkhairul#"
             target="_blank"
             rel="noopener noreferrer"
           >
