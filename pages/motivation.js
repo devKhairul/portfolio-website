@@ -1,8 +1,33 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+
+    const [quote, setQuote] = useState([])
+
+    const config = {
+      headers: {
+        'X-RapidAPI-Key': '3cc234d8acmsh41ba4a008de79b7p1968cbjsnf4ff361bdf37',
+        'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+      }
+    }
+    const url = 'https://quotes15.p.rapidapi.com/quotes/random/';
+
+    useEffect(() => {
+      const getQuote = async () => {
+        const data = await axios.get(url, config).then(res=> res.data)
+        setQuote(data)
+      }
+      getQuote()
+      
+    }, [])
+    
+    // console.log(quote.content)
+    // console.log(quote.originator.name)
+
     return (
       <div className={styles.container}>
         <Head>
@@ -17,8 +42,9 @@ export default function Home() {
           </h1>
   
           <p className={styles.description}>
-            The best coffee takes time to brew. <strong>Something awesome</strong> is brewing here too. <br />For now, hang onto your mug but please come back! 
+            { quote.content }
           </p>
+          <h2>{ quote.originator.name }</h2>
   
           <h2 className={styles.titlesm}>
             <Link href='/'>
