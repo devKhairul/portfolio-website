@@ -44,7 +44,7 @@ export default function Home() {
           <p className={styles.description}>
             { quote.content }
           </p>
-          <h2>{ quote.originator.name }</h2>
+          {/* <h2>{ quote.originator.name }</h2> */}
   
           <h2 className={styles.titlesm}>
             <Link href='/'>
