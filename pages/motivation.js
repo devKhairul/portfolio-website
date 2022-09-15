@@ -61,7 +61,7 @@ export default function Home() {
   
         <footer className={styles.footer}>
           <a
-            href="https://linkedin.com/in/devkhairul#"
+            href="https://linkedin.com/in/devkhairul"
             target="_blank"
             rel="noopener noreferrer"
           >
