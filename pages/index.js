@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,10 +22,12 @@ export default function Home() {
           The best coffee takes time to brew. <strong>Something awesome</strong> is brewing here too. <br />For now, hang onto your mug but please come back! 
         </p>
 
-        <h2 className={styles.titlesm}>
-          Check this out. Cool, eh? 
-          <hr/>
-        </h2>
+        <Box mb={10}>
+          <h2 className={styles.titlesm}>
+            Check these out. Cool, eh? 
+            <hr />
+          </h2>
+        </Box>
 
 
         <div className={styles.grid}>

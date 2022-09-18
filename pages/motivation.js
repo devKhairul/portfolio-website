@@ -3,11 +3,14 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { Box, Spinner } from '@chakra-ui/react'
+
+
 
 export default function Home() {
 
     const [quote, setQuote] = useState({})
-    const [refresh, setRefresh] = useState()
+    const [isLoading, setIsLoading] = useState(true)
     
     const config = {
       headers: {
@@ -21,8 +24,10 @@ export default function Home() {
       const getQuote = async () => {
         const data = await axios.get(url, config).then(res=> res.data)
         setQuote(data)
+        setIsLoading(false)
       }
       getQuote()
+      
       
     }, [])
     
@@ -42,20 +47,25 @@ export default function Home() {
           <h1 className={styles.title} style={{marginBottom: "1em"}}>
             Your daily dose of motivation
           </h1>
-            
+          
           <p className={styles.description} style={{margin: "10px"}}>
+            { isLoading && 'Loading an awesome quote...' }
             { quote.content && quote.content }
           </p>
 
           { quote.originator && <h2>{quote.originator.name}</h2> }
           
+          
+
+          <Box m={4}>
+            <h2 className={styles.titlesm}>
+              <Link href='/'>
+                  <a>&larr; Go back</a>
+              </Link> 
+            </h2>
+          </Box>
+          
           <small style={{marginBottom: "3em"}}>Courtesy of RapidAPI</small>
-            
-          <h2 className={styles.titlesm}>
-            <Link href='/'>
-                <a>&larr; Go back</a>
-            </Link> 
-          </h2>
           
         </main>
   
